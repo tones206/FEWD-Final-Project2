@@ -1,0 +1,152 @@
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../images/SSimage.pdf");
+	font-family: 'Fjalla One', sans-serif;
+}
+
+header {
+	background-color: white;
+	padding: 15px;
+	border-bottom: 2px solid black;
+}
+
+h1 {
+	color: gray;
+	font-size: 30px;
+}
+
+nav{
+	text-align: right;
+	padding-bottom: 10px;
+}
+
+nav a {
+	color: gray;
+	text-decoration: none;
+	margin: 10px;
+}
+
+nav a.find-link {
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+}
+
+p {
+	margin: 20px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
+	font-style: italic;
+	text-decoration: none;
+}
+
+
+section {
+	padding: 20px;
+	text-decoration: none;
+}
+
+aside {
+	width: 35%;
+	background: rgba(255, 255, 255, .5);
+	border: 3px solid black;
+	padding: 30px 20px;
+	margin: 20px;
+	float: right;
+}
+
+h3 {
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.separation {
+	height: 100px;
+	background: transparent;
+	padding: 10px;
+}
+
+
+.box {
+	font-size: 20px;
+	font-weight: 300;
+	text-decoration: none;
+	text-align: left;
+}
+
+.CTA {
+	background: #FFFF66;
+	text-decoration: none;
+	color: black;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
+	padding: 10px 30px;
+	border-radius: 5px;
+	border-bottom: 2px solid #E6E65C;
+}
+
+.finders {
+	background: white;
+}
+
+.finders article {
+	width: 33%;
+	border-right: 2px solid gray;
+	float: left;
+	padding: 15px;
+}
+
+.finders article #last {
+	border: transparent;
+}
+
+.finders h4 {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.finders article p {
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: left;
+}
+
+.finders a {
+	background-color: #d0d0d0;
+	border-bottom: 2px solid #888888;
+	text-align: center;
+	padding: ;
+}
+
+footer {
+	background: black;
+	background-size: cover;
+	height: 60px;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	padding: 20px;
+}
