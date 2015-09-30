@@ -18,7 +18,11 @@
 }
 
 body {
-	background-image: url("../images/SSimage.pdf");
+	background: url("../images/spaceNeedle.jpg");
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	height: 600px;
 	font-family: 'Fjalla One', sans-serif;
 }
 
@@ -31,6 +35,12 @@ header {
 h1 {
 	color: gray;
 	font-size: 30px;
+	text-decoration: none;
+	margin-left: 50px;
+}
+
+a:visited {
+	text-decoration: none;
 }
 
 nav{
@@ -80,8 +90,9 @@ h3 {
 }
 
 .separation {
-	height: 100px;
-	background: transparent;
+	height: 250px;
+	background: #F0F0F0;
+	opacity: 0.4;
 	padding: 10px;
 }
 
@@ -97,6 +108,8 @@ h3 {
 	background: #FFFF66;
 	text-decoration: none;
 	color: black;
+	display: block;
+	text-align: center;
 	text-transform: uppercase;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 700;
@@ -141,7 +154,7 @@ h3 {
 }
 
 footer {
-	background: black;
+	background: white;
 	background-size: cover;
 	height: 60px;
 	color: white;
@@ -149,4 +162,97 @@ footer {
 	font-size: 15px;
 	font-weight: 400;
 	padding: 20px;
+}
+
+.hamburger {
+	display: none;
+}
+
+.mobile_footer {
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+	nav {
+		display: none;
+	}
+	h1 {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.separation {
+	height: 100px;
+	background: #F0F0F0;
+	opacity: 0.4;
+	padding: 10px;
+}
+	
+	.hamburger {
+		display: block;
+		border-top: 2px solid black;
+		width: 20px;
+		float: right;
+		margin: 20px;
+		position: relative;
+	}
+	.hamburger::after {
+		content: '';
+		top: -10px;
+		position: absolute;
+		width: 20px;
+		border-top: 2px solid black;
+	}
+	.hamburger::before {
+		content: '';
+		width: 20px;
+		top: 6px;
+		position: absolute;
+		border-top: 2px solid black;
+	}
+
+	.hambuger-link {
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
+
+	.finders article {
+		clear: both;
+		display: block;
+		width: 97%;
+		border: none;
+		text-align: center;
+	}
+
+	.CTA {
+		clear: both;
+		width: 50%;
+		text-align: center;
+		display: block;
+		margin: auto;
+	}
+
+	article {
+		display: block;
+		height: 200px;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+
+	.mobile_footer {
+		display: block;
+	}
+
+}
+
+@media (max-width: 960px){
+
+}
+
+@media (max-width: 1024px) {
+	
 }
