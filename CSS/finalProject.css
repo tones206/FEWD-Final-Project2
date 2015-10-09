@@ -15,19 +15,18 @@
 
 * {
 	box-sizing: border-box;
-	font-family: 'PT Sans Narrow', sans-serif;
+	font-family: 'Josefin Slab', serif;
 
 }
 
 #slideshow, img.bgM {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index:-9999;
+	min-height: 100%;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:-9999;
 }
 
 
@@ -37,7 +36,7 @@ body {
 	background-position: center center;
 	background-size: cover;
 	height: 600px;
-	font-family: 'Fjalla One', sans-serif;
+	font-family: 'Josefin Slab', serif;
 }
 
 header {
@@ -48,9 +47,21 @@ header {
 
 h1 {
 	color: gray;
-	font-size: 30px;
 	text-decoration: none;
-	margin-left: 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+h2 {
+	font-size: 26px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 22px;
+	text-align: center;
+	margin-bottom: 3px;
+	margin-top: 10px;
 }
 
 .logo {
@@ -78,8 +89,8 @@ padding-top: 15px;
 -moz-box-shadow: 0px 0px 8px 0px #000000;
 box-shadow: 0px 0px 8px 0px #000000;
 /* Adds the transparent background */
-background-color: rgba(100, 98, 96.8);
-color: rgba(1, 1, 1, .8);
+background-color: rgba(255, 255, 255, .8);
+color: rgba(255, 255, 255, .8);
 }
 #navigation a {
 font-size: 18px;
@@ -92,6 +103,10 @@ text-decoration: none;
 #navigation a:hover {
 color: gray;
 } 
+
+#navigationMobile {
+	display: none;
+}
 
 p {
 	margin: 20px;
@@ -107,11 +122,6 @@ section {
 	padding: 20px;
 	text-decoration: none;
 	background-color: white;
-}
-
-h3 {
-	font-size: 30px;
-	font-weight: 600;
 }
 
 .separation {
@@ -136,12 +146,14 @@ h3 {
 	display: block;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Josefin Slab', serif;
 	font-weight: 700;
 	padding: 10px 30px;
 	border-radius: 5px;
 	border-bottom: 2px solid #E6E65C;
 }
+
+
 
 .finders {
 	background: white;
@@ -151,14 +163,16 @@ h3 {
 }
 
 .finders article {
+	display: block;
 	width: 33%;
 	border-right: 2px solid gray;
 	float: left;
 	padding: 15px;
+	text-align: center;
 }
 
-.finders article #last {
-	border: transparent;
+.finders #last {
+	border: none;
 }
 
 .finders h4 {
@@ -167,11 +181,11 @@ h3 {
 }
 
 .finders article p {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Josefin Slab', serif;
 	font-size: 16px;
 	font-weight: 400;
 	text-decoration: none;
-	text-align: left;
+	text-align: center;
 }
 
 .finders a {
@@ -188,7 +202,7 @@ h3 {
 
 #workSection img {
 	width: 24%;
-	height:210px;
+	background: cover;
 	padding: 10px 7px;
 	margin: 0 auto;
 }
@@ -196,7 +210,7 @@ h3 {
 .About {
 	background-color: white;
 	color: gray;
-	font-size: 18px;
+	font-size: 26px;
 	font-weight: 400;
 	text-decoration: none;
 	text-align: center;
@@ -216,11 +230,25 @@ h3 {
 
 .Siri p,
 .Antonia p {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Josefin Slab', serif;
 	font-size: 16px;
 	font-weight: 400;
 	text-decoration: none;
 	text-align: center;
+}
+
+.About h4 {
+	font-size: 22px;
+}
+
+.whoLink {
+	background-color: #E0E0E0;
+	color: gray;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 5px;
+	border-radius: 10%;
+	border: 1px solid #6B6B6B;
 }
 
 .Contact {
@@ -228,18 +256,40 @@ h3 {
 	color: gray;
 	display: block;
 	text-align: center;
+	font-size: 18px;
 }
 
 .contact-form {
 	display: block;
 }
 
+.inputText {
+	font-size: 15px;
+}
+
+.inputText .contactInput {
+	width: 40%;
+}
+
+#message .inputText {
+	font-size: 15px;
+}
+
 textarea {
 	margin: 10px;
+	width: 50%;
 }
 
 form {
 	text-align: center;
+}
+
+.submitButton {
+	font-size: 18px;
+	background-color: gray;
+	color: white;
+	padding: 5px 2px 2px 2px;
+	border-radius: 15%;
 }
 
 .blog h2 {
@@ -248,28 +298,51 @@ form {
 }
 
 #blog-articles {
-	display: block;
 	width: 100%;
-	text-align: center;
+	margin-top: 20px;
 }
 
-.blog h4 {
-	font-size: 15px;
+.blog h3 {
 	color: gray;
 }
 
 #blog-articles p {
-	font-size: 12px
+	font-size: 18px;
+	width: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 10px;
+	margin: 0 auto;
 }
+
 footer {
 	clear: both;
 	background: white;
 	background-size: cover;
 	color: white;
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Josefin Slab', serif;
 	font-size: 15px;
 	font-weight: 400;
 	padding: 20px;
+	margin: 0 auto;
+}
+
+.footerText {
+	display: block;
+	color: gray;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.footerContact {
+	display: block;
+	float: right;
+	margin-top: 15px;
+	margin-right: 10%;
+	font-size: 20px;
+	background-color: #E8E8E8;
+	padding: 5px;
 }
 
 .hamburger {
@@ -282,51 +355,60 @@ footer {
 
 
 @media (max-width: 768px) {
-	nav {
+
+	#slideshow, img.bgM {
+	min-height: 100%;
+	width: 100%;
+	height: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:-9999;
+	}
+
+	#navigation {
 		display: none;
 	}
+
+	#navigationMobile {
+		display: block;
+		position: fixed;
+		top: 0;
+		width: 95%;
+		color: #ffffff;
+		height: 35px;
+		text-align: center;
+		padding-top: 15px;
+		/* Adds shadow to the bottom of the bar */
+		-webkit-box-shadow: 0px 0px 8px 0px #000000;
+		-moz-box-shadow: 0px 0px 8px 0px #000000;
+		box-shadow: 0px 0px 8px 0px #000000;
+		/* Adds the transparent background */
+		background-color: rgba(255, 255, 255, .8);
+		color: rgba(255, 255, 255, .8);
+	}
+		#navigation a {
+		font-size: 18px;
+		padding-left: 15px;
+		padding-right: 15px;
+		color: rgba(69, 69, 69);
+		text-decoration: none;
+	}
+
+	#navigation a:hover {
+		color: gray;
+	} 
+
 	h1 {
 		display: block;
 		font-size: 2rem;
-		text-align: left;
+		text-align: center;
 	}
 	.separation {
-	height: 100px;
-	background: #F0F0F0;
-	opacity: 0.4;
-	padding: 10px;
-}
-	
-	.hamburger {
-		display: block;
-		border-top: 2px solid black;
-		width: 20px;
-		float: right;
-		margin: 20px;
-		position: relative;
-	}
-	.hamburger::after {
-		content: '';
-		top: -10px;
-		position: absolute;
-		width: 20px;
-		border-top: 2px solid black;
-	}
-	.hamburger::before {
-		content: '';
-		width: 20px;
-		top: 6px;
-		position: absolute;
-		border-top: 2px solid black;
-	}
-
-	.hambuger-link {
-		cursor: pointer;
-		width: 30px;
-		height: 30px;
-		position: absolute;
-		top: 25px;
-		right: 25px;
+		height: 100px;
+		background: #F0F0F0;
+		opacity: 0.4;
+		padding: 10px;
 	}
 
 	.finders article {
@@ -334,6 +416,10 @@ footer {
 		display: block;
 		width: 97%;
 		border: none;
+		text-align: center;
+	}
+
+	.finders article p {
 		text-align: center;
 	}
 
@@ -347,8 +433,6 @@ footer {
 
 	article {
 		display: block;
-		height: 200px;
-		margin-bottom: 50px;
 		text-align: center;
 	}
 
@@ -358,8 +442,8 @@ footer {
 
 	#workSection img {
 		display: block;
-		width: 300px;
-		height: 200px;
+		background: cover;
+		width: 75%;
 		clear: both;
 		margin: 0 auto;
 
@@ -382,6 +466,29 @@ footer {
 		display: block;
 		text-align: center;
 		width: 100%;
+	}
+
+	.blog h2 {
+		text-align: center;
+		color: gray;
+	}
+
+	#blog-articles {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+
+	.blog h3 {
+		color: gray;
+	}
+
+	#blog-articles p {
+		font-size: 18px;
+		width: 250px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 }

@@ -3,8 +3,10 @@
 	<head>
 		<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 		<link href="css/finalProject.css" rel="stylesheet" type="text/css" />
-		<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href="css/lightbox.css" rel="stylesheet">
 		<title>Angeles Consulting</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
 
@@ -19,9 +21,6 @@
 		  <img src="./images/br3.jpg" class="bgM"/>
 		</div>
 
-			<div class="hamburger"></div>
-				<a href="#footer" class="hamburger-link">
-
 		<h1>Angeles Consulting</h1>
 
 		<img class="logo" src="images/SSLogo.jpg" alt="Angeles Consulting" style="width:100px;height:75px;">		
@@ -33,6 +32,13 @@
 				<a href="#blogSection" id="blog">Blog</a>
 			</nav>
 
+			<nav id="navigationMobile">
+				<a href="#servicesSection" id="services">Services</a>
+				<a href="#workSection" id="work">Work</a>
+				<a href="#ourTeamSection" id="ourTeam">Our Team</a>
+				<a href="#contactSection" id="contact">Contact</a>
+				<a href="#blogSection" id="blog">Blog</a>
+			</nav>
 
 		</header>
 
@@ -40,17 +46,17 @@
 
 		<section id="servicesSection" class="finders clearfix">
 			<article>
-				<h4>Social Media</h4>
+				<h3>Social Media</h3>
 					<p>We can assist your company with original content ideas as well as posting campaigns</p>
 				<a href="#" class="CTA">Need our help?</a>
 			</article>
 			<article>
-				<h4>Marketing</h4>
+				<h3>Marketing</h3>
 					<p>The grand campaign ideas for your company</p>
 				<a href="#" class="CTA">Take a look</a>
 			</article>
 			<article id="last">
-				<h4>Design</h4>
+				<h3>Design</h3>
 					<p>We have design capabilites for all your needs.</p>
 				<a href="#" class="CTA">Take a look at our Work</a>
 			</article>
@@ -59,10 +65,18 @@
 		<div class = "separation clearfix"></div>
 
 		<section id="workSection">
-			<img src="images/CITH.jpg" alt="The Chef in the Hat">
-			<img src="images/ThePhysics.jpg" alt="The Physics">
-			<img src="images/MariCannonBeach.jpg" alt="Cannon Beach">
-			<img src="images/MariFace.jpg" alt="Mari Face">
+			<a href="images/CITH.jpg" data-lightbox="works" data-title="The Chef in the Hat - Thierry Rautureau">
+				<img src="images/CITH.jpg" alt="The Chef in the Hat">
+			</a>
+			<a href="images/ThePhysics.jpg" data-lightbox="works" data-title="The Physics">
+				<img src="images/ThePhysics.jpg" alt="The Physics">
+			</a>
+			<a href="images/MariCannonBeach.jpg" data-lightbox="works" data-title="Cannon Beach">
+				<img src="images/MariCannonBeach.jpg" alt="Cannon Beach">
+			</a>
+			<a href="images/MariFace.jpg" data-lightbox="works" data-title="Mariana Angeles Hare">
+				<img src="images/MariFace.jpg" alt="Mari Face">
+			</a>
 		</section>
 			
 		<div class = "separation clearfix"></div>
@@ -73,14 +87,14 @@
 				<img class="img-circle" src="images/Siri-headshot.jpg" alt="Siri-headshot" style="width:200px;height:200px;">
 				<h4>Marketing Consultant</h4>
 				<p>great things about Siri Angeles, cuz she is an awesome person and great at what she does!</p>
-				<button class="Siri-learnMore">Learn More</button>
+				<a href="https://www.linkedin.com/profile/view?id=ADEAAAFtQ8cBZkcaM1Gs7DxPjyYbJvMNQWz-eD8&authType=OUT_OF_NETWORK&authToken=1pED&locale=en_US&srchid=1988228381444284059680&srchindex=1&srchtotal=11004&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A1988228381444284059680%2CVSRPtargetId%3A23937991%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Atrue%2CauthType%3AOUT_OF_NETWORK" class="whoLink" target="_blank">Siri's Linkedin</a>
 			</div>
 
 			<div class="Antonia">
 				<img class="img-circle" src="images/Antonia-headshot.jpg" alt="Antonia-headshot" style="width:200px;height:200px;">
 				<h4>Marketing Consultant</h4>
 				<p>great things about Siri Angeles, cuz she is an awesome person and great at what she does!</p>
-				<button class="Siri-learnMore">Learn More</button>
+				<a href="https://www.linkedin.com/profile/view?id=AAIAAAvZy7YBaPhhq_5M1MO5bpF172zjF7Y8hww&trk=nav_responsive_tab_profile_pic" class="whoLink" target="_blank">Tones Linkedin</a>
 			</div>
 
 		</section>
@@ -90,11 +104,12 @@
 		<section id="contactSection" class="Contact">
 			<h2>Contact Us<h2>
 			<form class="contact-form" action="register.php" method="post">
-  				<input type="text" placeholder="Your Full Name" />
-  				<input type="email" placeholder="Your Email" /><br>
+  				<input type="text" placeholder="Your Full Name" class="inputText contactInput" />
+  				<input type="email" placeholder="Your Email" class="inputText contactInput" /><br>
 				<div class="message-bg">
-					<textarea placeholder="Let's chat!..." id="Message" rows="20" cols="45" class="required"></textarea>
+					<textarea placeholder="Let's chat!..." id="Message" rows="20" cols="45" maxlength="400" class="required inputText"></textarea>
 				</div>
+				<input type="submit" value="SUBMIT" class="submitButton">
 			</form>
 		</section>
 
@@ -103,39 +118,30 @@
 		<section id="blogSection" class="blog">
 			<h2>Blog</h2>
 			<article id="blog-articles" class='Blog1'>
-				<h4>This is this</h4>
-				<p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></p>
+				<h3>This is this</h3>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 			</article>
 			<article id="blog-articles" class='Blog2'>
-				<h4>this is that</h4>
-				<p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></p>
+				<h3>this is that</h3>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 			</article>
 			<article id="blog-articles" class='Blog3'>
-				<h4>this is something else</h4>
-				<p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p></p>
+				<h3>this is something else</h3>
+				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.&hellip;</p>
 			</article>
 		</section>
 
 		<div class = "separation clearfix"></div>
-		<footer>
 
-		<div class="FB"></div>
-		<div class="Twitter"></div>
-		<div class="IG"></div>
-			<!--
-			<div class="mobile_footer">
-				<a href="#" class="mobile-services">Services</a><br>
-				<a href="#" class="mobile-work">Work</a><br>
-				<a href="#" class="mobile-ourTeam">Our Team</a><br>
-				<a href="#" class="mobile-contact">Contact</a><br>
-				<a href="#" class="mobile-Blog">Blog</a><br>
-			</div>
-			-->
+		<footer>
+				<div class="footerText">| Angeles Consulting | tones206@gmail.com |</div>
+<!--				<a href="#contactSection" class="footerContact">Drop a Note</a>
+-->
 		</footer>
 
-		<script src='http://code.jquery.com/jquery-latest.min.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="JS/main.js" type="text/javascript"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
-	<script type="text/javascript" src="./JS/scripts/jquery.cycle.js"></script>
+		<script type="text/javascript" src="./JS/scripts/jquery.cycle.js"></script>
+		<script src="JS/lightbox.js"></script>
 	</body>
 </html>

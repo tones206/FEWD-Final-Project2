@@ -1,0 +1,32 @@
+	
+	.hamburger {
+		display: block;
+		border-top: 2px solid black;
+		width: 20px;
+		float: right;
+		margin: 20px;
+		position: relative;
+	}
+	.hamburger::after {
+		content: '';
+		top: -10px;
+		position: absolute;
+		width: 20px;
+		border-top: 2px solid black;
+	}
+	.hamburger::before {
+		content: '';
+		width: 20px;
+		top: 6px;
+		position: absolute;
+		border-top: 2px solid black;
+	}
+
+	.hambuger-link {
+		cursor: pointer;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+	}
